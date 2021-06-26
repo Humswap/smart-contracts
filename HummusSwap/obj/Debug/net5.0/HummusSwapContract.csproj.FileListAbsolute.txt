@@ -1,0 +1,12 @@
+C:\Users\17026\Atomswap\HummusSwap\bin\Debug\net5.0\HummusSwapContract.deps.json
+C:\Users\17026\Atomswap\HummusSwap\bin\Debug\net5.0\HummusSwapContract.dll
+C:\Users\17026\Atomswap\HummusSwap\bin\Debug\net5.0\ref\HummusSwapContract.dll
+C:\Users\17026\Atomswap\HummusSwap\bin\Debug\net5.0\HummusSwapContract.pdb
+C:\Users\17026\Atomswap\HummusSwap\obj\Debug\net5.0\HummusSwapContract.csproj.AssemblyReference.cache
+C:\Users\17026\Atomswap\HummusSwap\obj\Debug\net5.0\HummusSwapContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\Atomswap\HummusSwap\obj\Debug\net5.0\HummusSwapContract.AssemblyInfoInputs.cache
+C:\Users\17026\Atomswap\HummusSwap\obj\Debug\net5.0\HummusSwapContract.AssemblyInfo.cs
+C:\Users\17026\Atomswap\HummusSwap\obj\Debug\net5.0\HummusSwapContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\Atomswap\HummusSwap\obj\Debug\net5.0\HummusSwapContract.dll
+C:\Users\17026\Atomswap\HummusSwap\obj\Debug\net5.0\ref\HummusSwapContract.dll
+C:\Users\17026\Atomswap\HummusSwap\obj\Debug\net5.0\HummusSwapContract.pdb

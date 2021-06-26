@@ -1,0 +1,12 @@
+[
+  {
+    "contract": "TestTokenContract",
+    "operation": "transfer",
+    "args": [
+      "NaxfqSZ7CSSyZEccoJ6ztXm3Ex5Rau17re",
+      "NhzQjmDYtUa6mR3vdQ3cNMkGQCQ85fqq2S",
+      10,
+      ""
+    ]
+  }
+]

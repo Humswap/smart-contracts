@@ -1,0 +1,12 @@
+[
+  {
+    "contract": "GasToken",
+    "operation": "transfer",
+    "args": [
+      "@genesis",
+      "@Jason3",
+      100000000000,
+      ""
+    ]
+  }
+]

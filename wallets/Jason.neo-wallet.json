@@ -1,0 +1,29 @@
+{
+  "name": "Jason",
+  "version": "1.0",
+  "scrypt": {
+    "n": 16384,
+    "r": 8,
+    "p": 8,
+    "size": 64
+  },
+  "accounts": [
+    {
+      "address": "NNzxiJE8XKtuibpgK94YkSSWSHfWdVidkb",
+      "label": "Default account",
+      "isDefault": true,
+      "lock": false,
+      "key": "6PYL3ok1AKQ6vAEKukS93jCmmBfeZXEHp8YvjttjFDqvdXjQqo3Njz95P3",
+      "contract": {
+        "script": "DCEDrfmH9hOftVMKFdOcI3lAn3cqqhu/Eddixz0ofPRlNh1BVuezJw==",
+        "parameters": [
+          {
+            "name": "signature",
+            "type": "Signature"
+          }
+        ],
+        "deployed": false
+      }
+    }
+  ]
+}

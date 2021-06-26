@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eCX0UC9HL7mpT62wqm2t8FtZ6ILDh6ClRiw9t5rhIGW6T9EQM4GXnolimsBxCNzINnPkJVkbD7P5dVdOpXFBFA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\17026\\Atomswap\\contracts\\HumsAuction\\src\\HumsAuctionContract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\17026\\.nuget\\packages\\neo.smartcontract.framework\\3.0.0-rc3\\neo.smartcontract.framework.3.0.0-rc3.nupkg.sha512"
+  ],
+  "logs": []
+}
