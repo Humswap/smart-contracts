@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uOKM36p/tUrR+Z56GOqzrX9WBjoN4BK5HDCJ5cn8xZdvxL3pHlqH9+zmMocxdB+CO9ACaahn8tu/C7+M697sCw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\17026\\Atomswap\\contracts\\OriginalHummusNFT\\src\\OriginalHummusNFTContract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\17026\\.nuget\\packages\\neo.smartcontract.framework\\3.0.0-rc3\\neo.smartcontract.framework.3.0.0-rc3.nupkg.sha512"
+  ],
+  "logs": []
+}

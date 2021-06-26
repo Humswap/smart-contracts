@@ -1,0 +1,11 @@
+[
+  {
+    "contract": "HummusSwapContract",
+    "operation": "update",
+    "args": [
+      "#HummusSwapContract",
+      "#HummusSwapContract",
+      ""
+    ]
+  }
+]

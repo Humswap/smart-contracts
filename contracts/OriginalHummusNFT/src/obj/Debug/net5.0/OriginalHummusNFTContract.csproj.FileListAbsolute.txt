@@ -1,0 +1,12 @@
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\bin\Debug\net5.0\OriginalHummusNFTContract.deps.json
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\bin\Debug\net5.0\OriginalHummusNFTContract.dll
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\bin\Debug\net5.0\ref\OriginalHummusNFTContract.dll
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\bin\Debug\net5.0\OriginalHummusNFTContract.pdb
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\obj\Debug\net5.0\OriginalHummusNFTContract.csproj.AssemblyReference.cache
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\obj\Debug\net5.0\OriginalHummusNFTContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\obj\Debug\net5.0\OriginalHummusNFTContract.AssemblyInfoInputs.cache
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\obj\Debug\net5.0\OriginalHummusNFTContract.AssemblyInfo.cs
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\obj\Debug\net5.0\OriginalHummusNFTContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\obj\Debug\net5.0\OriginalHummusNFTContract.dll
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\obj\Debug\net5.0\ref\OriginalHummusNFTContract.dll
+C:\Users\17026\Atomswap\contracts\OriginalHummusNFT\src\obj\Debug\net5.0\OriginalHummusNFTContract.pdb

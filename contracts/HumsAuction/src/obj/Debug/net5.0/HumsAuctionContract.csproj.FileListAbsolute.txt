@@ -1,0 +1,12 @@
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\bin\Debug\net5.0\HumsAuctionContract.deps.json
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\bin\Debug\net5.0\HumsAuctionContract.dll
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\bin\Debug\net5.0\ref\HumsAuctionContract.dll
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\bin\Debug\net5.0\HumsAuctionContract.pdb
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\obj\Debug\net5.0\HumsAuctionContract.csproj.AssemblyReference.cache
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\obj\Debug\net5.0\HumsAuctionContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\obj\Debug\net5.0\HumsAuctionContract.AssemblyInfoInputs.cache
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\obj\Debug\net5.0\HumsAuctionContract.AssemblyInfo.cs
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\obj\Debug\net5.0\HumsAuctionContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\obj\Debug\net5.0\HumsAuctionContract.dll
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\obj\Debug\net5.0\ref\HumsAuctionContract.dll
+C:\Users\17026\Atomswap\contracts\HumsAuction\src\obj\Debug\net5.0\HumsAuctionContract.pdb

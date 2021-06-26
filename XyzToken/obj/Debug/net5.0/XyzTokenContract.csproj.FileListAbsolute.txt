@@ -1,0 +1,12 @@
+C:\Users\17026\Atomswap\XyzToken\bin\Debug\net5.0\XyzTokenContract.deps.json
+C:\Users\17026\Atomswap\XyzToken\bin\Debug\net5.0\XyzTokenContract.dll
+C:\Users\17026\Atomswap\XyzToken\bin\Debug\net5.0\ref\XyzTokenContract.dll
+C:\Users\17026\Atomswap\XyzToken\bin\Debug\net5.0\XyzTokenContract.pdb
+C:\Users\17026\Atomswap\XyzToken\obj\Debug\net5.0\XyzTokenContract.csproj.AssemblyReference.cache
+C:\Users\17026\Atomswap\XyzToken\obj\Debug\net5.0\XyzTokenContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\Atomswap\XyzToken\obj\Debug\net5.0\XyzTokenContract.AssemblyInfoInputs.cache
+C:\Users\17026\Atomswap\XyzToken\obj\Debug\net5.0\XyzTokenContract.AssemblyInfo.cs
+C:\Users\17026\Atomswap\XyzToken\obj\Debug\net5.0\XyzTokenContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\Atomswap\XyzToken\obj\Debug\net5.0\XyzTokenContract.dll
+C:\Users\17026\Atomswap\XyzToken\obj\Debug\net5.0\ref\XyzTokenContract.dll
+C:\Users\17026\Atomswap\XyzToken\obj\Debug\net5.0\XyzTokenContract.pdb

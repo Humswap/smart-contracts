@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7i8KAtZVfj7hp4V51Db3LSHin/c8vI6gTijzNXgyh+vBVo12x49HyMJ50sEVtt/Z8fr5IiFYwHvOrm+Pr4s6kQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\17026\\Atomswap\\NFTSeller\\NFTSellerContract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\17026\\.nuget\\packages\\neo.smartcontract.framework\\3.0.0-rc2\\neo.smartcontract.framework.3.0.0-rc2.nupkg.sha512"
+  ],
+  "logs": []
+}
