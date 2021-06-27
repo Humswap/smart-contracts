@@ -1,0 +1,11 @@
+[
+  {
+    "contract": "PitaTossContract",
+    "operation": "transferOut",
+    "args": [
+      777,
+      "#PitaTossContract",
+      "@Jason3"
+    ]
+  }
+]
