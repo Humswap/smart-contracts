@@ -13,11 +13,11 @@ namespace OriginalHummusNFTTests {
     #endif
     [System.ComponentModel.Description("OriginalHummusNFTContract")]
     interface OriginalHummusNFTContract {
-        bool changeNumber(System.Numerics.BigInteger positiveNumber);
-        byte[] getNumber();
+        void emitNFT();
         void updateContract(byte[] nefFile, string manifest);
+        void destroy();
         interface Events {
-            void NumberChanged(Neo.UInt160 arg1, System.Numerics.BigInteger arg2);
+            void DisplayNFT(string obj);
         }
     }
 }

@@ -8265,11 +8265,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\17026\\Atomswap\\contracts\\OriginalHummusNFT\\test\\OriginalHummusNFTContractTests.csproj",
+      "projectUniqueName": "C:\\Users\\17026\\smart-contracts\\contracts\\OriginalHummusNFT\\test\\OriginalHummusNFTContractTests.csproj",
       "projectName": "OriginalHummusNFTContractTests",
-      "projectPath": "C:\\Users\\17026\\Atomswap\\contracts\\OriginalHummusNFT\\test\\OriginalHummusNFTContractTests.csproj",
+      "projectPath": "C:\\Users\\17026\\smart-contracts\\contracts\\OriginalHummusNFT\\test\\OriginalHummusNFTContractTests.csproj",
       "packagesPath": "C:\\Users\\17026\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\17026\\Atomswap\\contracts\\OriginalHummusNFT\\test\\obj\\",
+      "outputPath": "C:\\Users\\17026\\smart-contracts\\contracts\\OriginalHummusNFT\\test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\17026\\AppData\\Roaming\\NuGet\\NuGet.Config"

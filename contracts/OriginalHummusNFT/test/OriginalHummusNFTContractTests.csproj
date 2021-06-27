@@ -60,7 +60,6 @@
     <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet neoxp wallet create -i bin/OriginalHummusNFTTests.neo-express owner" />
     <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet neoxp wallet create -i bin/OriginalHummusNFTTests.neo-express alice" />
     <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet neoxp wallet create -i bin/OriginalHummusNFTTests.neo-express bob" />
-    <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet neoxp batch -i bin/OriginalHummusNFTTests.neo-express setup-test-chain.batch" />
   </Target>
 
 </Project>
