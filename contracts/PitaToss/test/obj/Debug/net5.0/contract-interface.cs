@@ -14,13 +14,16 @@ namespace PitaTossTests {
     [System.ComponentModel.Description("PitaTossContract")]
     interface PitaTossContract {
         void onNEP17Payment(Neo.UInt160 @from, System.Numerics.BigInteger amount, object @data);
-        void transferOut(System.Numerics.BigInteger amount, Neo.UInt160 thisAddress, Neo.UInt160 to);
+        void transferGASOut(System.Numerics.BigInteger amount, Neo.UInt160 thisAddress, Neo.UInt160 to);
+        void genericTransferOut(System.Numerics.BigInteger amount, Neo.UInt160 thisAddress, Neo.UInt160 to, Neo.UInt160 tokenAddress);
         void updateRange(System.Numerics.BigInteger range);
         void updateContract(byte[] nefFile, string manifest);
         void destroy();
+        void destroyNFT(Neo.UInt160 addr);
         interface Events {
             void SendRandomNumber(System.Numerics.BigInteger arg1, Neo.UInt160 arg2);
-            void WinNFT(Neo.UInt160 obj);
+            void WinNFT(bool arg1, Neo.UInt160 arg2, Neo.UInt160 arg3);
+            void NewNFTLoaded(Neo.UInt160 obj);
         }
     }
 }
