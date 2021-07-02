@@ -1,0 +1,12 @@
+C:\Users\17026\smart-contracts\contracts\Auction\src\bin\Debug\net5.0\AuctionContract.deps.json
+C:\Users\17026\smart-contracts\contracts\Auction\src\bin\Debug\net5.0\AuctionContract.dll
+C:\Users\17026\smart-contracts\contracts\Auction\src\bin\Debug\net5.0\ref\AuctionContract.dll
+C:\Users\17026\smart-contracts\contracts\Auction\src\bin\Debug\net5.0\AuctionContract.pdb
+C:\Users\17026\smart-contracts\contracts\Auction\src\obj\Debug\net5.0\AuctionContract.csproj.AssemblyReference.cache
+C:\Users\17026\smart-contracts\contracts\Auction\src\obj\Debug\net5.0\AuctionContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\smart-contracts\contracts\Auction\src\obj\Debug\net5.0\AuctionContract.AssemblyInfoInputs.cache
+C:\Users\17026\smart-contracts\contracts\Auction\src\obj\Debug\net5.0\AuctionContract.AssemblyInfo.cs
+C:\Users\17026\smart-contracts\contracts\Auction\src\obj\Debug\net5.0\AuctionContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\smart-contracts\contracts\Auction\src\obj\Debug\net5.0\AuctionContract.dll
+C:\Users\17026\smart-contracts\contracts\Auction\src\obj\Debug\net5.0\ref\AuctionContract.dll
+C:\Users\17026\smart-contracts\contracts\Auction\src\obj\Debug\net5.0\AuctionContract.pdb

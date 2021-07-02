@@ -280,6 +280,41 @@
       },
       "problemMatcher": "$msCompile",
       "dependsOn": "PitaToss: restore-tools"
+    },
+    {
+      "options": {
+        "cwd": "${workspaceFolder}/contracts/Auction"
+      },
+      "label": "Auction: restore-tools",
+      "command": "dotnet",
+      "type": "shell",
+      "args": [
+        "tool",
+        "restore"
+      ],
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "options": {
+        "cwd": "${workspaceFolder}/contracts/Auction"
+      },
+      "label": "Auction: build",
+      "command": "dotnet",
+      "type": "shell",
+      "args": [
+        "build",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": "$msCompile",
+      "dependsOn": "Auction: restore-tools"
     }
   ]
 }
