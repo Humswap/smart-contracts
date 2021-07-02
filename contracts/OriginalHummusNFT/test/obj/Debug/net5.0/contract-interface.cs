@@ -17,6 +17,7 @@ namespace OriginalHummusNFTTests {
         System.Numerics.BigInteger decimals();
         System.Numerics.BigInteger totalSupply();
         bool transfer(Neo.UInt160 @from, Neo.UInt160 to, System.Numerics.BigInteger amount, object @data);
+        void winNFT(Neo.UInt160 @from, Neo.UInt160 to, System.Numerics.BigInteger amount, object @data);
         void updateContract(byte[] nefFile, string manifest);
         void destroy();
         interface Events {

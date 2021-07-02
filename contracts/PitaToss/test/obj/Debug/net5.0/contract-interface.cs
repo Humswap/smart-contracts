@@ -19,7 +19,6 @@ namespace PitaTossTests {
         void updateRange(System.Numerics.BigInteger range);
         void updateContract(byte[] nefFile, string manifest);
         void destroy();
-        void destroyNFT(Neo.UInt160 addr);
         interface Events {
             void SendRandomNumber(System.Numerics.BigInteger arg1, Neo.UInt160 arg2);
             void WinNFT(bool arg1, Neo.UInt160 arg2, Neo.UInt160 arg3);

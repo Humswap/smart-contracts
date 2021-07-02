@@ -16,12 +16,19 @@ namespace PitaToss
     [ManifestExtra("Description", "Toss Pita and win NFTs. Tossing costs 0.1 GAS")]
     [ContractPermission("*", "onNEP17Payment")]
     [ContractPermission("*", "transfer")]
-    [ContractPermission("*", "destroyNFT")]
+    [ContractPermission("*", "winNFT")]
 
     public class PitaTossContract : SmartContract
     {
-        const string nftKey = "n";
-        private static StorageMap ContractMetadata => new StorageMap(Storage.CurrentContext, "Metadata");
+        static class Keys
+        {
+            public const string Owner = "o";
+            public const string NFTToWin = "n";
+            public const string Range = "r";
+        }
+        private static StorageMap Store => new StorageMap(Storage.CurrentContext, "DB_");
+
+        // Mark: Events
         // random number, address that sent GAS
         public static event Action<uint, UInt160> SendRandomNumber;
         // didWin, NFT address, address of the winner
@@ -31,12 +38,21 @@ namespace PitaToss
         private static Transaction Tx => (Transaction) Runtime.ScriptContainer;
         private static bool IsOwner()
         {
-            ByteString owner = ContractMetadata.Get("Owner");
+            ByteString owner = Store.Get(Keys.Owner);
             if (!Tx.Sender.Equals(owner))
             {
                 return false;
             }
             return true;
+        }
+
+        private static void ValidateOwner()
+        {
+            ByteString owner = Store.Get(Keys.Owner);
+            if (!Tx.Sender.Equals(owner))
+            {
+                throw new Exception("Only the contract owner can do this");
+            }
         }
 
         /*
@@ -53,33 +69,34 @@ namespace PitaToss
                 if (amount < 10000000) throw new Exception("Not enough GAS");
                 var tx = (Transaction)Runtime.ScriptContainer;
                 uint nonce = tx.Nonce >> 1;
-                uint range = 100; //(uint)StdLib.Deserialize(ContractMetadata.Get("range"));
+                var stringInt = (string)Store.Get(Keys.Range);
+                uint range = uint.Parse(stringInt);
                 uint randomNumber = nonce % range;
                 SendRandomNumber(randomNumber, tx.Sender);
                 if (randomNumber > 20)
                 {
                     // Win NFT
-                    var winningNFT = (UInt160)ContractMetadata.Get(nftKey);
-                    if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
-                        Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
+                    var winningNFT = (UInt160)Store.Get(Keys.NFTToWin);
                     WinNFT(true, winningNFT, tx.Sender);
+                    if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
+                        Contract.Call(winningNFT, "winNFT", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
                 }
                 else 
                 {
                     // Did not win, here we are simulating the same GAS price scenario so that we always know the 
                     // correct GAS. Additionally, just send NFT to the same owner contract
-                    var winningNFT = (UInt160)ContractMetadata.Get(nftKey);
-                    if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
-                        Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, Runtime.ExecutingScriptHash, 1, data });
+                    var winningNFT = (UInt160)Store.Get(Keys.NFTToWin);
                     WinNFT(false, winningNFT, Runtime.ExecutingScriptHash);
+                    if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
+                        Contract.Call(winningNFT, "winNFT", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, Runtime.ExecutingScriptHash, 1, data });
                 }
             }
             else 
             {
-                // Otherwise, we are loading the contract with NFTs
+                // Otherwise, we are loading the contract with an NFT
                 if (IsOwner()) 
                 {
-                    ContractMetadata.Put(nftKey, (ByteString) Runtime.CallingScriptHash);
+                    Store.Put(Keys.NFTToWin, (ByteString) Runtime.CallingScriptHash);
                     NewNFTLoaded(Runtime.CallingScriptHash);
                 }
                 else 
@@ -94,66 +111,40 @@ namespace PitaToss
         {
             if (!update)
             {
-                ContractMetadata.Put("Owner", (ByteString) Tx.Sender);
-                //ContractMetadata.Put("range", (uint) 100);
+                Store.Put(Keys.Owner, (ByteString) Tx.Sender);
+                Store.Put(Keys.Range, (uint) 100);
             }
         }
 
         public static void TransferGASOut(BigInteger amount, UInt160 thisAddress, UInt160 to) 
         {
-            ByteString owner = ContractMetadata.Get("Owner");
-            if (!Tx.Sender.Equals(owner))
-            {
-                throw new Exception("Only the contract owner can do this");
-            }
+            ValidateOwner();
             GAS.Transfer(thisAddress, to, amount);
         }
 
         public static void GenericTransferOut(BigInteger amount, UInt160 thisAddress, UInt160 to, UInt160 tokenAddress) 
         {
-            ByteString owner = ContractMetadata.Get("Owner");
-            if (!Tx.Sender.Equals(owner))
-            {
-                throw new Exception("Only the contract owner can do this");
-            }
+            ValidateOwner();
             if (to is not null && ContractManagement.GetContract(tokenAddress) is not null)
-                Contract.Call(to, "transfer", CallFlags.All, thisAddress, to, amount);
+                Contract.Call(to, "transfer", CallFlags.All, new object[] { thisAddress, to, amount });
         }
 
         public static void UpdateRange(uint range) 
         {
-            ByteString owner = ContractMetadata.Get("Owner");
-            if (!Tx.Sender.Equals(owner))
-            {
-                throw new Exception("Only the contract owner can do this");
-            }
-            ContractMetadata.Put("range", (uint) range);
+            ValidateOwner();
+            Store.Put("range", (uint) range);
         }
 
         public static void UpdateContract(ByteString nefFile, string manifest)
         {
-            ByteString owner = ContractMetadata.Get("Owner");
-            if (!Tx.Sender.Equals(owner))
-            {
-                throw new Exception("Only the contract owner can do this");
-            }
+            ValidateOwner();
             ContractManagement.Update(nefFile, manifest, null);
         }
 
         public static void Destroy()
         {
-            ByteString owner = ContractMetadata.Get("Owner");
-            if (!Tx.Sender.Equals(owner))
-            {
-                throw new Exception("Only the contract owner can do this");
-            }
+            ValidateOwner();
             ContractManagement.Destroy();
-        }
-
-        public static void DestroyNFT(UInt160 addr)
-        {
-            if (ContractManagement.GetContract(addr) is not null)
-                Contract.Call(addr, "destroy", CallFlags.All);
         }
     }
 }
