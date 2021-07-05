@@ -39,36 +39,5 @@ namespace AuctionTests
             storages.TryGetValue("MetadataOwner", out var item).Should().BeTrue();
             item!.Should().Be(owner);
         }
-
-        [Fact]
-        public void can_change_number()
-        {
-            var settings = chain.GetProtocolSettings();
-            var alice = chain.GetDefaultAccount("alice").ToScriptHash(settings.AddressVersion);
-
-            using var snapshot = fixture.GetSnapshot();
-
-            // ExecuteScript converts the provided expression(s) into a Neo script
-            // loads them into the engine and executes it 
-            using var engine = new TestApplicationEngine(snapshot, settings, alice);
-
-            engine.ExecuteScript<AuctionContract>(c => c.changeNumber(42));
-
-            engine.State.Should().Be(VMState.HALT);
-            engine.ResultStack.Should().HaveCount(1);
-            engine.ResultStack.Peek(0).Should().BeTrue();
-
-            // ensure that notification is triggered
-            engine.Notifications.Should().HaveCount(1);
-            engine.Notifications[0].EventName.Should().Be("NumberChanged");
-            engine.Notifications[0].State[0].Should().BeEquivalentTo(alice);
-            engine.Notifications[0].State[1].Should().BeEquivalentTo(42);
-
-            // ensure correct storage item was created 
-            var storages = snapshot.GetContractStorages<AuctionContract>();
-            var contractStorage = storages.StorageMap("AuctionContract");
-            contractStorage.TryGetValue(alice, out var item).Should().BeTrue();
-            item!.Should().Be(42);
-        }
     }
 }

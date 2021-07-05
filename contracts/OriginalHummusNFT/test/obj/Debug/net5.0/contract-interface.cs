@@ -16,12 +16,13 @@ namespace OriginalHummusNFTTests {
         string symbol();
         System.Numerics.BigInteger decimals();
         System.Numerics.BigInteger totalSupply();
+        System.Numerics.BigInteger balanceOf(Neo.UInt160 account);
         bool transfer(Neo.UInt160 @from, Neo.UInt160 to, System.Numerics.BigInteger amount, object @data);
         void winNFT(Neo.UInt160 @from, Neo.UInt160 to, System.Numerics.BigInteger amount, object @data);
         void updateContract(byte[] nefFile, string manifest);
         void destroy();
         interface Events {
-            void OwnerChanged(Neo.UInt160 arg1, Neo.UInt160 arg2, System.Numerics.BigInteger arg3);
+            void Transfer(Neo.UInt160 arg1, Neo.UInt160 arg2, System.Numerics.BigInteger arg3);
         }
     }
 }

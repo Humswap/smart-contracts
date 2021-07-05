@@ -38,12 +38,14 @@ namespace OriginalHummusNFT
         private static Transaction Tx => (Transaction) Runtime.ScriptContainer;
 
         /// From, to, cost
-        public static event Action<UInt160, UInt160, BigInteger> OwnerChanged;
+        [DisplayName("Transfer")]
+        public static event Action<UInt160, UInt160, BigInteger> OnTransfer;
+
         public static string id = "0001";
         public static string series = "Originals";
 
         [Safe]
-        public static string Symbol() => "OGHUMMUS";
+        public static string Symbol() => "HUMMUS";
 
         [Safe]
         public static byte Decimals() => 0;
@@ -64,6 +66,15 @@ namespace OriginalHummusNFT
             }
         }
 
+        public static BigInteger BalanceOf(UInt160 account)
+        {
+            if (Store.Get(Keys.Owner) == account)
+            {
+                return 1;
+            }
+            return 0;
+        }
+
         [DisplayName("_deploy")]
         public static void Deploy(object data, bool update)
         {
@@ -78,25 +89,26 @@ namespace OriginalHummusNFT
             if (amount <= 0) throw new Exception("The parameter amount MUST be greater than 0.");
             // if (!Runtime.CheckWitness(from) && !from.Equals(Runtime.CallingScriptHash)) throw new Exception("No authorization.");
             ValidateOwner();
-            OwnerChanged(from, to, amount);
+            OnTransfer(from, to, 1);
             Store.Put(Keys.Owner, (ByteString) to);
             if (ContractManagement.GetContract(to) != null)
-                Contract.Call(to, "onNEP17Payment", CallFlags.All, new object[] { from, amount, data });
+                Contract.Call(to, "onNEP17Payment", CallFlags.All, new object[] { from, 1, data });
             return true;
         }
 
         // Winning an NFT means we have a new contract owner
         public static void WinNFT(UInt160 from, UInt160 to, BigInteger amount, object data)
         {
-            // if (amount <= 0) throw new Exception("The parameter amount MUST be greater than 0.");
+            if (amount <= 0) throw new Exception("The parameter amount MUST be greater than 0.");
             // if (!Runtime.CheckWitness(from) && !from.Equals(Runtime.CallingScriptHash)) throw new Exception("No authorization.");
             // ByteString owner = ContractMetadata.Get("Owner");
             // if (!Tx.Sender.Equals(owner))
             // {
             //     throw new Exception("Only the contract owner can do this");
             // }
+            ValidateOwner();
             Store.Put(Keys.Owner, (ByteString) to);
-            OwnerChanged(from, to, amount);
+            OnTransfer(from, to, 1);
         }
 
         public static void UpdateContract(ByteString nefFile, string manifest)

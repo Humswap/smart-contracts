@@ -13,11 +13,17 @@ namespace AuctionTests {
     #endif
     [System.ComponentModel.Description("AuctionContract")]
     interface AuctionContract {
-        bool changeNumber(System.Numerics.BigInteger positiveNumber);
-        byte[] getNumber();
+        void onNEP17Payment(Neo.UInt160 @from, System.Numerics.BigInteger amount, object @data);
         void updateContract(byte[] nefFile, string manifest);
+        void endAuction(object @data);
+        void currentAuction();
+        void currentHighestBid();
         interface Events {
-            void NumberChanged(Neo.UInt160 arg1, System.Numerics.BigInteger arg2);
+            void NewHighestBid(System.Numerics.BigInteger arg1, Neo.UInt160 arg2);
+            void WinNFT(bool arg1, Neo.UInt160 arg2, Neo.UInt160 arg3);
+            void NewNFTLoaded(Neo.UInt160 obj);
+            void LiveAuction(Neo.UInt160 obj);
+            void HighestBidInfo(System.Numerics.BigInteger arg1, Neo.UInt160 arg2);
         }
     }
 }

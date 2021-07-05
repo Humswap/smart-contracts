@@ -1,5 +1,5 @@
 {
-  "magic": 127574514,
+  "magic": 1174499323,
   "address-version": 53,
   "consensus-nodes": [
     {
@@ -10,24 +10,24 @@
         "name": "node1",
         "accounts": [
           {
-            "private-key": "4b22c1fa7e3dce76171b6eaeb42f7a0d51b39191fe5dfebe85c8727bb0f5feb5",
-            "script-hash": "NMxPEDffTMUjUTMev4FoPKcVWgQf35prhD",
+            "private-key": "23e91481aad3f26dbe6f41d93ab0925e4ac6b813aabc8765df1a0b871ec4cba1",
+            "script-hash": "NgntkZFP39zRB8EtL24ZSwR7oLpyvrUYnC",
             "label": null,
             "is-default": true,
             "contract": {
-              "script": "0c2103b5949f5e8c0b58397bd3d3a01c012d70e53c6091a4001f28d0ae7759728abefb4156e7b327",
+              "script": "0c2103e97ed4bbb9eae0956a41e3f5ee80bfde2260cf0d309480e08ee46c56a7417fa04156e7b327",
               "parameters": [
                 "Signature"
               ]
             }
           },
           {
-            "private-key": "4b22c1fa7e3dce76171b6eaeb42f7a0d51b39191fe5dfebe85c8727bb0f5feb5",
-            "script-hash": "NMrExDmJBMsmo9ULidzEj7Yftmt8wTF1Ba",
+            "private-key": "23e91481aad3f26dbe6f41d93ab0925e4ac6b813aabc8765df1a0b871ec4cba1",
+            "script-hash": "NebHtAibArV8mzE7PgT796k7NckhXNpuLp",
             "label": "Consensus MultiSigContract",
             "is-default": false,
             "contract": {
-              "script": "110c2103b5949f5e8c0b58397bd3d3a01c012d70e53c6091a4001f28d0ae7759728abefb11419ed0dc3a",
+              "script": "110c2103e97ed4bbb9eae0956a41e3f5ee80bfde2260cf0d309480e08ee46c56a7417fa011419ed0dc3a",
               "parameters": [
                 "Signature"
               ]
@@ -42,12 +42,12 @@
       "name": "owner",
       "accounts": [
         {
-          "private-key": "59c49c2cdf167405756a939f7204c130075c67014292d8a89d7dbe7bfa4999e6",
-          "script-hash": "NhzF9Nk1MG3dJM47fJKBr2xKiPdLb1jyqW",
+          "private-key": "caf80fbd7fb1c247feb4d84dd1440f3f232aa9b4b3a6de7968dbacb125ea5830",
+          "script-hash": "NXFf1aRKNi8LYQrg8c8wu6Y8uBx4BKryvs",
           "label": null,
           "is-default": true,
           "contract": {
-            "script": "0c21039cdbf597b9c2591d6c1bc1104887dae079b9d2127576be4fb4d428775acee67b4156e7b327",
+            "script": "0c2102b2ddb6e0ff9c0c556c45bd3ba4db4d27dff0f65d2e39ab55a5d1eb7183028f794156e7b327",
             "parameters": [
               "Signature"
             ]
@@ -59,12 +59,12 @@
       "name": "alice",
       "accounts": [
         {
-          "private-key": "45cb81f8b384df8e03743208d45e344832f055c12792fe26613670eeb54af715",
-          "script-hash": "NUzZDHA2uPwqQJnToKrp2u3Avzd5NrvZmM",
+          "private-key": "8d1a4c590a38f350beab290f3a02af4819859204d2338682b769fd1a99e45449",
+          "script-hash": "NaREHX9nkuymdJvPtzRMDaXKERyg3wztYo",
           "label": null,
           "is-default": true,
           "contract": {
-            "script": "0c210341b14052a6b667899b83c2bed74eaa19f1b5265abc1e25f213fd4fd3a9b6ad9f4156e7b327",
+            "script": "0c2103b7d6cabdbd6a7afcbb137e41e26882f5ec4dd117cef8154bc9945c2a8cced9674156e7b327",
             "parameters": [
               "Signature"
             ]
@@ -76,12 +76,12 @@
       "name": "bob",
       "accounts": [
         {
-          "private-key": "3c5ca412741575dd78826d7595310401608ffa20b7eddfea0ee8987defab4d24",
-          "script-hash": "NL684XJMtinqLkKbabd1q1XiB5y6ouBa5k",
+          "private-key": "55257e08a7e726d14bca8272adadfcef7ec1c3c51a5b370f8c3882733746ffe0",
+          "script-hash": "NXZn7vU66dmHGMSaSnm9ZFXJx9MtFit2ab",
           "label": null,
           "is-default": true,
           "contract": {
-            "script": "0c2102407331fb98b1444de7a6d60ed303f2eef4f8bebaadf98f3d57600465ab796ca84156e7b327",
+            "script": "0c2102b336fd76c8db67565dce53487111fd25ddd85ce5cace5df4fd114cb3d0f35db64156e7b327",
             "parameters": [
               "Signature"
             ]

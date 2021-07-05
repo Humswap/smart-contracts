@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vHt1dkV9tTWf9/JcaCPaTkqlnepTv11rW+geHqkpQ3kmd/zh1AGwIo+UJu2q/cFF9l4JcHk8tQG+vxHLiuV1Ug==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\17026\\smart-contracts\\contracts\\PitaToken\\src\\PitaTokenContract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\17026\\.nuget\\packages\\neo.smartcontract.framework\\3.0.0-rc3\\neo.smartcontract.framework.3.0.0-rc3.nupkg.sha512"
+  ],
+  "logs": []
+}
