@@ -16,7 +16,6 @@ namespace Auction
     [ManifestExtra("Description", "Hummus Auction Contract for NFTs")]
     [ContractPermission("*", "onNEP17Payment")]
     [ContractPermission("*", "transfer")]
-    [ContractPermission("*", "winNFT")]
     public class AuctionContract : SmartContract
     {
         static class Keys
@@ -123,7 +122,7 @@ namespace Auction
             var winningNFT = (UInt160)Store.Get(Keys.NFTToWin);
             WinNFT(true, winningNFT, highestBidder);
             if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
-                Contract.Call(winningNFT, "winNFT", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, highestBidder, 1, data });
+                Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, highestBidder, 1, data });
             // Set to default state
             Store.Delete(Keys.highestBidder);
             Store.Delete(Keys.NFTToWin);

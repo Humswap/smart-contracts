@@ -71,17 +71,18 @@ namespace PitaToss
                 if (amount < 10000000) throw new Exception("Not enough GAS");
                 var tx = (Transaction)Runtime.ScriptContainer;
                 uint nonce = tx.Nonce >> 1;
-                var stringInt = (string)Store.Get(Keys.Range);
-                uint range = uint.Parse(stringInt);
+                string bInt = ((BigInteger)Store.Get(Keys.Range)).ToString();
+                uint range = uint.Parse(bInt);
                 uint randomNumber = nonce % range;
                 SendRandomNumber(randomNumber, tx.Sender);
-                if (randomNumber > 20)
+                // If range is 100, we have a 1% chance to win the prize
+                if (randomNumber >= range - 1)
                 {
                     // Win the PrizeNFT
                     var winningNFT = (UInt160)Store.Get(Keys.PrizeNFT);
                     WinNFT(winningNFT, tx.Sender);
                     if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
-                        Contract.Call(winningNFT, "winNFT", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
+                        Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
                 }
                 else 
                 {
@@ -89,22 +90,9 @@ namespace PitaToss
                     var winningNFT = (UInt160)Store.Get(Keys.DefaultNFT);
                     WinNFT(winningNFT, tx.Sender);
                     if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
-                        Contract.Call(winningNFT, "winNFT", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
+                        Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
                 }
             }
-            // else 
-            // {
-            //     // Otherwise, we are loading the contract with an NFT
-            //     if (IsOwner()) 
-            //     {
-            //         Store.Put(Keys.PrizeNFT, (ByteString) Runtime.CallingScriptHash);
-            //         NewNFTLoaded(Runtime.CallingScriptHash);
-            //     }
-            //     else 
-            //     {
-            //         throw new Exception("Only the contract owner can do this");
-            //     }
-            // }
         }
 
         [DisplayName("_deploy")]
@@ -113,7 +101,7 @@ namespace PitaToss
             if (!update)
             {
                 Store.Put(Keys.Owner, (ByteString) Tx.Sender);
-                Store.Put(Keys.Range, (uint) 100);
+                Store.Put(Keys.Range, (BigInteger) 100);
             }
         }
 
@@ -144,10 +132,10 @@ namespace PitaToss
                 Contract.Call(tokenAddress, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, to, amount });
         }
 
-        public static void UpdateRange(uint range) 
+        public static void UpdateRange(BigInteger range) 
         {
             ValidateOwner();
-            Store.Put("range", (uint) range);
+            Store.Put(Keys.Range, (BigInteger) range);
         }
 
         public static void UpdateContract(ByteString nefFile, string manifest)

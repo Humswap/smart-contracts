@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "PitaTossContract",
+    "operation": "setDefaultNFT",
+    "args": [
+      "#PitaTokenContract"
+    ]
+  }
+]

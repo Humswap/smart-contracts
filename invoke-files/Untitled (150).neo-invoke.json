@@ -1,0 +1,12 @@
+[
+  {
+    "contract": "PitaTokenContract",
+    "operation": "transfer",
+    "args": [
+      "@Jason3",
+      "#PitaTossContract",
+      100,
+      ""
+    ]
+  }
+]

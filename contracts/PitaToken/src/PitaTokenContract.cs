@@ -15,6 +15,9 @@ namespace PitaToken
     [ManifestExtra("Email", "info@humswap.org")]
     [ManifestExtra("Description", "Dip PITA in Hummus")]
     [SupportedStandards("NEP-17")]
+    [ContractPermission("*", "onNEP17Payment")]
+    [ContractPermission("*", "transfer")]
+    [ContractPermission("*", "winNFT")]
 
     public class PitaTokenContract : SmartContract
     {
@@ -34,10 +37,8 @@ namespace PitaToken
             public const string Owner = "o";
         }
 
-        public static class AssetStorage
+        private static class AssetStorage
         {
-            public static readonly string mapName = "asset";
-
             public static void Increase(UInt160 key, BigInteger value) => Put(key, Get(key) + value);
 
             public static void Enable() => Store.Put("enable".ToByteArray(), 1);
@@ -66,11 +67,9 @@ namespace PitaToken
             public static void Remove(UInt160 key) => Store.Delete((byte[])key);
         }
 
-        public static class TotalSupplyStorage
+        private static class TotalSupplyStorage
         {
             private static StorageMap Store => new StorageMap(Storage.CurrentContext, "DB_");
-
-            public static readonly string mapName = "contract";
 
             public static readonly string key = "totalSupply";
 
