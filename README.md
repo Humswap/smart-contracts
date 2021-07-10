@@ -11,13 +11,13 @@ Our mission is to make fun and easy to use DeFi+NFT products on NEO. Would you l
   :sparkles: <b>Token/NFT Swapping</b>
 </p>
 <p align="center">
-  🎲: <b>Games Games Games!</b>
+  🎲 <b>Games Games Games!</b>
 </p>
 <p align="center">
-  ❤️: <b>Unique NFT Integrations</b>
+  ❤️ <b>Unique NFT Integrations</b>
 </p>
 <p align="center">
-  🎊: <b>Stake NFTs? Sure!</b>
+  🎊 <b>Stake NFTs? Sure!</b>
 </p>
 
 <br>
