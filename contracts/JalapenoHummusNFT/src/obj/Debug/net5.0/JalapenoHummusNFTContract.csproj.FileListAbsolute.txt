@@ -1,0 +1,12 @@
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\bin\Debug\net5.0\JalapenoHummusNFTContract.deps.json
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\bin\Debug\net5.0\JalapenoHummusNFTContract.dll
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\bin\Debug\net5.0\ref\JalapenoHummusNFTContract.dll
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\bin\Debug\net5.0\JalapenoHummusNFTContract.pdb
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\obj\Debug\net5.0\JalapenoHummusNFTContract.csproj.AssemblyReference.cache
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\obj\Debug\net5.0\JalapenoHummusNFTContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\obj\Debug\net5.0\JalapenoHummusNFTContract.AssemblyInfoInputs.cache
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\obj\Debug\net5.0\JalapenoHummusNFTContract.AssemblyInfo.cs
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\obj\Debug\net5.0\JalapenoHummusNFTContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\obj\Debug\net5.0\JalapenoHummusNFTContract.dll
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\obj\Debug\net5.0\ref\JalapenoHummusNFTContract.dll
+C:\Users\17026\smart-contracts\contracts\JalapenoHummusNFT\src\obj\Debug\net5.0\JalapenoHummusNFTContract.pdb
