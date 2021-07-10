@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Y9ctZA+Khcdzi7MLyfPvPOMTTaXtsYCt9dHojnfk05sxHMCb0QnXlmhFGpFB5zVq8meNfLusDMJ7ShhcpVDYvg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\17026\\smart-contracts\\contracts\\BummusNFT\\src\\BummusNFTContract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\17026\\.nuget\\packages\\neo.smartcontract.framework\\3.0.0-rc3\\neo.smartcontract.framework.3.0.0-rc3.nupkg.sha512"
+  ],
+  "logs": []
+}
