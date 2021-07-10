@@ -1,0 +1,11 @@
+[
+  {
+    "contract": "OriginalHummusNFTContract",
+    "operation": "transfer",
+    "args": [
+      "@Jason3",
+      "#PitaTossContract",
+      1
+    ]
+  }
+]

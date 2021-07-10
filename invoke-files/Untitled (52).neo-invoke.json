@@ -1,0 +1,10 @@
+[
+  {
+    "contract": "PitaTossContract",
+    "operation": "_deploy",
+    "args": [
+      "",
+      "true"
+    ]
+  }
+]

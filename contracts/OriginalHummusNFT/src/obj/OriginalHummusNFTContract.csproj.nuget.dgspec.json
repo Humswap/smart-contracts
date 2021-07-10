@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\17026\\Atomswap\\contracts\\OriginalHummusNFT\\src\\OriginalHummusNFTContract.csproj": {}
+    "C:\\Users\\17026\\smart-contracts\\contracts\\OriginalHummusNFT\\src\\OriginalHummusNFTContract.csproj": {}
   },
   "projects": {
-    "C:\\Users\\17026\\Atomswap\\contracts\\OriginalHummusNFT\\src\\OriginalHummusNFTContract.csproj": {
+    "C:\\Users\\17026\\smart-contracts\\contracts\\OriginalHummusNFT\\src\\OriginalHummusNFTContract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\17026\\Atomswap\\contracts\\OriginalHummusNFT\\src\\OriginalHummusNFTContract.csproj",
+        "projectUniqueName": "C:\\Users\\17026\\smart-contracts\\contracts\\OriginalHummusNFT\\src\\OriginalHummusNFTContract.csproj",
         "projectName": "OriginalHummusNFTContract",
-        "projectPath": "C:\\Users\\17026\\Atomswap\\contracts\\OriginalHummusNFT\\src\\OriginalHummusNFTContract.csproj",
+        "projectPath": "C:\\Users\\17026\\smart-contracts\\contracts\\OriginalHummusNFT\\src\\OriginalHummusNFTContract.csproj",
         "packagesPath": "C:\\Users\\17026\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\17026\\Atomswap\\contracts\\OriginalHummusNFT\\src\\obj\\",
+        "outputPath": "C:\\Users\\17026\\smart-contracts\\contracts\\OriginalHummusNFT\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\17026\\AppData\\Roaming\\NuGet\\NuGet.Config"

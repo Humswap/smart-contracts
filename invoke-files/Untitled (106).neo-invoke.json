@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "GasToken",
+    "operation": "balanceOf",
+    "args": [
+      "@Jason4"
+    ]
+  }
+]

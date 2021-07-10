@@ -1,0 +1,10 @@
+[
+  {
+    "contract": "HummusSwapContract",
+    "args": [
+      "",
+      "false"
+    ],
+    "operation": "_deploy"
+  }
+]

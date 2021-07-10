@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5b8cI0skK+4hgiwfBT7HtmDdIo5kpmxZ82jyFK4Ja9cL1jYoZXd78UaI87niPnxYI0Y5O4zJINcO3IrsPqRezQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\17026\\smart-contracts\\contracts\\Purchase\\src\\PurchaseContract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\17026\\.nuget\\packages\\neo.smartcontract.framework\\3.0.0-rc3\\neo.smartcontract.framework.3.0.0-rc3.nupkg.sha512"
+  ],
+  "logs": []
+}

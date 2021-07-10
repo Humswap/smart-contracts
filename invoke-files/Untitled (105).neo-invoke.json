@@ -1,0 +1,11 @@
+[
+  {
+    "contract": "PitaTossContract",
+    "operation": "transferGASOut",
+    "args": [
+      20000000,
+      "#PitaTossContract",
+      "@Jason4"
+    ]
+  }
+]

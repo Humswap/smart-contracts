@@ -1,0 +1,12 @@
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\bin\Debug\net5.0\PitaTossContract.deps.json
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\bin\Debug\net5.0\PitaTossContract.dll
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\bin\Debug\net5.0\ref\PitaTossContract.dll
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\bin\Debug\net5.0\PitaTossContract.pdb
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\obj\Debug\net5.0\PitaTossContract.csproj.AssemblyReference.cache
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\obj\Debug\net5.0\PitaTossContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\obj\Debug\net5.0\PitaTossContract.AssemblyInfoInputs.cache
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\obj\Debug\net5.0\PitaTossContract.AssemblyInfo.cs
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\obj\Debug\net5.0\PitaTossContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\obj\Debug\net5.0\PitaTossContract.dll
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\obj\Debug\net5.0\ref\PitaTossContract.dll
+C:\Users\17026\smart-contracts\contracts\PitaToss\src\obj\Debug\net5.0\PitaTossContract.pdb

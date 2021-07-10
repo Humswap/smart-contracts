@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "AuctionContract",
+    "operation": "endAuction",
+    "args": [
+      ""
+    ]
+  }
+]
