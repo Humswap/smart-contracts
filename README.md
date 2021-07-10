@@ -133,3 +133,19 @@ Our purchase contract allows for the purchase of tokens and NFTs with other toke
 🚀 **2022 Q2**
   * Introduce at least one new game
   * Improvements on Swap and Liquidity Pool features to present open protocols for usage. Ideally, anyone can be an Automated Market Maker
+
+<br>
+
+# Notes
+
+<br>
+
+🗒️ Our NFTs are following the NEP17 standard and we have yet to adopt them to NEP11. This was a conscious decision given our NFTs will have a purpose in our DeFi products, in addition to being art. We will need to test this further as perhaps these NFTs will support both NEP11 and NEP17 standards.
+
+🗒️ All of our NFT art is still work in progress as we are working with multiple designers. The art displayed in this readme is for illustration purposes only, and are not final designs.
+
+🗒️ Multipliers for NFTs displayed in this readme are not final. We will run economic simulations to determine awards for our NFTs. NFTs may also interact with our games, such as giving you a bonus chance in PitaToss if you hold a certain NFT.
+
+🗒️ Both Smart Contract code and the website are works in progress. We will have our smart contracts auditied prior to launch.
+
+<br>
