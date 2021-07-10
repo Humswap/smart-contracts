@@ -141,5 +141,11 @@ namespace Auction
             var highestBidder =  (UInt160)Store.Get(Keys.highestBidder);
             HighestBidInfo(highestBid, highestBidder);
         }
+        
+        public static void Destroy()
+        {
+            ValidateOwner();
+            ContractManagement.Destroy();
+        }
     }
 }

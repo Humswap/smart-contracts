@@ -27,6 +27,7 @@ namespace Purchase
 
         // NFT Address, Purchaser
         public static event Action<UInt160, UInt160> PurchasedNFT;
+        public static event Action<BigInteger> PriceToPurchase;
 
         private static StorageMap Store => new StorageMap(Storage.CurrentContext, "x");
 
@@ -54,6 +55,8 @@ namespace Purchase
         public static void OnNEP17Payment(UInt160 from, BigInteger amount, object data)
         {
             // Owner loads the NFT/Purchasable token
+            // This is a convenience for the Owner. In the event of multiple NFTs, 
+            // Owner can change which is purchasable with `SetNFTToPurchase`
             if (IsOwner())
             {
                 Store.Put(Keys.NFTToPurchase, Runtime.CallingScriptHash);
@@ -87,6 +90,7 @@ namespace Purchase
         public static void SetPurchasePrice(BigInteger price)
         {
             ValidateOwner();
+            PriceToPurchase(price);
             Store.Put(Keys.PurchasePrice, (BigInteger) price);
         }
 
@@ -113,6 +117,12 @@ namespace Purchase
         {
             ValidateOwner();
             ContractManagement.Update(nefFile, manifest, null);
+        }
+
+        public static void Destroy()
+        {
+            ValidateOwner();
+            ContractManagement.Destroy();
         }
     }
 }

@@ -18,6 +18,7 @@ namespace AuctionTests {
         void endAuction(object @data);
         void currentAuction();
         void currentHighestBid();
+        void destroy();
         interface Events {
             void NewHighestBid(System.Numerics.BigInteger arg1, Neo.UInt160 arg2);
             void WinNFT(bool arg1, Neo.UInt160 arg2, Neo.UInt160 arg3);

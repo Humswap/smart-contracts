@@ -16,7 +16,6 @@ namespace PitaToss
     [ManifestExtra("Description", "Toss Pita and win NFTs. Tossing costs 0.1 GAS")]
     [ContractPermission("*", "onNEP17Payment")]
     [ContractPermission("*", "transfer")]
-    [ContractPermission("*", "winNFT")]
 
     public class PitaTossContract : SmartContract
     {
@@ -30,12 +29,11 @@ namespace PitaToss
         private static StorageMap Store => new StorageMap(Storage.CurrentContext, "x");
 
         // Mark: Events
-        // random number, address that sent GAS
-        public static event Action<uint, UInt160> SendRandomNumber;
-        // NFT address, address of the winner
-        public static event Action<UInt160, UInt160> WinNFT;
+        // Random number, Winning number, NFT address, address of the winner
+        public static event Action<uint, uint, UInt160, UInt160> WinNFT;
         public static event Action<UInt160> NewPrizeNFTLoaded;
         public static event Action<UInt160> NewDefaultNFTLoaded;
+        public static event Action<BigInteger> RangeUpdated;
 
         private static Transaction Tx => (Transaction) Runtime.ScriptContainer;
         private static bool IsOwner()
@@ -74,13 +72,12 @@ namespace PitaToss
                 string bInt = ((BigInteger)Store.Get(Keys.Range)).ToString();
                 uint range = uint.Parse(bInt);
                 uint randomNumber = nonce % range;
-                SendRandomNumber(randomNumber, tx.Sender);
                 // If range is 100, we have a 1% chance to win the prize
                 if (randomNumber >= range - 1)
                 {
                     // Win the PrizeNFT
                     var winningNFT = (UInt160)Store.Get(Keys.PrizeNFT);
-                    WinNFT(winningNFT, tx.Sender);
+                    WinNFT(randomNumber, range - 1, winningNFT, tx.Sender);
                     if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
                         Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
                 }
@@ -88,7 +85,7 @@ namespace PitaToss
                 {
                     // Win DefaultNFT
                     var winningNFT = (UInt160)Store.Get(Keys.DefaultNFT);
-                    WinNFT(winningNFT, tx.Sender);
+                    WinNFT(randomNumber, range - 1, winningNFT, tx.Sender);
                     if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
                         Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
                 }
@@ -101,7 +98,7 @@ namespace PitaToss
             if (!update)
             {
                 Store.Put(Keys.Owner, (ByteString) Tx.Sender);
-                Store.Put(Keys.Range, (BigInteger) 100);
+                Store.Put(Keys.Range, (BigInteger) 1000);
             }
         }
 
@@ -135,6 +132,7 @@ namespace PitaToss
         public static void UpdateRange(BigInteger range) 
         {
             ValidateOwner();
+            RangeUpdated(range);
             Store.Put(Keys.Range, (BigInteger) range);
         }
 

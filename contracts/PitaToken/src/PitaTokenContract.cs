@@ -17,7 +17,6 @@ namespace PitaToken
     [SupportedStandards("NEP-17")]
     [ContractPermission("*", "onNEP17Payment")]
     [ContractPermission("*", "transfer")]
-    [ContractPermission("*", "winNFT")]
 
     public class PitaTokenContract : SmartContract
     {

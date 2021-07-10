@@ -19,6 +19,7 @@ namespace PurchaseTests {
         void setNFTToPurchase(Neo.UInt160 nftAddress);
         void genericTransferOut(System.Numerics.BigInteger amount, Neo.UInt160 to, Neo.UInt160 tokenAddress);
         void updateContract(byte[] nefFile, string manifest);
+        void destroy();
         interface Events {
             void PurchasedNFT(Neo.UInt160 arg1, Neo.UInt160 arg2);
         }

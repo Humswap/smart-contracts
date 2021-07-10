@@ -22,10 +22,10 @@ namespace PitaTossTests {
         void updateContract(byte[] nefFile, string manifest);
         void destroy();
         interface Events {
-            void SendRandomNumber(System.Numerics.BigInteger arg1, Neo.UInt160 arg2);
-            void WinNFT(Neo.UInt160 arg1, Neo.UInt160 arg2);
+            void WinNFT(System.Numerics.BigInteger arg1, System.Numerics.BigInteger arg2, Neo.UInt160 arg3, Neo.UInt160 arg4);
             void NewPrizeNFTLoaded(Neo.UInt160 obj);
             void NewDefaultNFTLoaded(Neo.UInt160 obj);
+            void RangeUpdated(System.Numerics.BigInteger obj);
         }
     }
 }

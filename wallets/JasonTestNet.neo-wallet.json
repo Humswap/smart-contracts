@@ -1,0 +1,29 @@
+{
+  "name": "JasonTestNet",
+  "version": "1.0",
+  "scrypt": {
+    "n": 16384,
+    "r": 8,
+    "p": 8,
+    "size": 64
+  },
+  "accounts": [
+    {
+      "address": "NVNqVNW6ws74RS6PMBH3t2zEJ12EDLf35x",
+      "label": "Default account",
+      "isDefault": true,
+      "lock": false,
+      "key": "6PYWuEomRsU7iWvzhjhYhTDMypAxMufYcTDggMHdusqk7dFwe3CfMrs7gf",
+      "contract": {
+        "script": "DCEDPS+0zLJx5wBA8vi7TG04S75SOUXEDGHfK3aw0PXnashBVuezJw==",
+        "parameters": [
+          {
+            "name": "signature",
+            "type": "Signature"
+          }
+        ],
+        "deployed": false
+      }
+    }
+  ]
+}
