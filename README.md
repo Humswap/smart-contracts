@@ -146,6 +146,6 @@ Our purchase contract allows for the purchase of tokens and NFTs with other toke
 
 🗒️ Multipliers for NFTs displayed in this readme are not final. We will run economic simulations to determine awards for our NFTs. NFTs may also interact with our games, such as giving you a bonus chance in PitaToss if you hold a certain NFT.
 
-🗒️ Both Smart Contract code and the website are works in progress. We will have our smart contracts auditied prior to launch.
+🗒️ Both Smart Contract code and the website are works in progress. We will have our smart contracts audited prior to launch.
 
 <br>
