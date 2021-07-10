@@ -23,6 +23,9 @@ Our mission is to make fun and easy to use DeFi+NFT products on NEO. Would you l
 <br>
 
 # Contracts
+
+<br>
+
 On TestNet we currently have seven live contracts, with more on the way.
 
 ### OriginalHummusNFT (Live on TestNet) - [[Dora Link]](https://dora.coz.io/contract/neo3/mainnet/0x97f2a5dabafbef8b8ec25a4adce273f827af80ae) 
@@ -31,9 +34,12 @@ On TestNet we currently have seven live contracts, with more on the way.
 <img src="https://user-images.githubusercontent.com/85466543/125154039-cbcd0400-e10c-11eb-92b8-17f076cac609.png" width="150" height="125"/>
 </p>
 
-The Original Hummus NFT will be able to be staked in order to multiply your yields in the liquidity pool. Multiplier 2x
+The Original Hummus NFT will be able to be staked in order to multiply your yields in the liquidity pool. Multiplier 2x in our Liquidity Pool. This can be won by playing PitaToss
 
 *OriginalHummusNFT Address:* `0x97f2a5dabafbef8b8ec25a4adce273f827af80ae`
+
+**⭐ Roadmap Item**: Integrate Neofs for all NFTs
+
 <br>
 
 ### BummusNFT (Live on TestNet) - [[Dora Link]](https://dora.coz.io/contract/neo3/mainnet/0x734fd178956f2156a2a38cd58d7471259b7d979c)
@@ -42,9 +48,12 @@ The Original Hummus NFT will be able to be staked in order to multiply your yiel
 <img src="https://user-images.githubusercontent.com/85466543/125154732-56633280-e110-11eb-9e55-464ac281f734.png" width="150" height="125"/>
 </p>
 
-Beet Hummus NFT that will allow for a multiplier in our liquidity pool. Multiplier 1.5x
+Beet Hummus NFT that will allow for a multiplier in our liquidity pool. Multiplier 1.5x in our Liquidity Pool. This can be purchased with PITA via the PurchaseContract
 
 *BummusNFT Address:* `0x734fd178956f2156a2a38cd58d7471259b7d979c`
+
+**⭐ Roadmap Item**: Integrate Neofs for all NFTs
+
 <br>
 
 ### JalapenoHummusNFT (Live on TestNet) - [[Dora Link]](https://dora.coz.io/contract/neo3/mainnet/0xefbff647b8e253aaad4866c0d0084c756e7c0667)
@@ -53,9 +62,12 @@ Beet Hummus NFT that will allow for a multiplier in our liquidity pool. Multipli
 <img src="https://user-images.githubusercontent.com/85466543/125154821-d5586b00-e110-11eb-8480-59edffd3199d.png" width="160" height="110"/>
 </p>
 
-Jumping Jalapeno, spicy hummus. Multiplier 1.7x
+Jumping Jalapeno, spicy hummus. Multiplier 1.7x in our Liquidity Pool. This can be won via the AuctionContract
 
 *JalapenoHummusNFT Address:* `0xefbff647b8e253aaad4866c0d0084c756e7c0667`
+
+**⭐ Roadmap Item**: Integrate Neofs for all NFTs
+
 <br>
 
 ### PitaNFT (Live on TestNet) - [[Dora Link]](https://dora.coz.io/contract/neo3/mainnet/0xfbfaa7f4dee963fe20573ce9dd883ecb98cd57e8)
@@ -64,9 +76,12 @@ Jumping Jalapeno, spicy hummus. Multiplier 1.7x
 <img src="https://user-images.githubusercontent.com/85466543/125154900-4861e180-e111-11eb-9f94-a69d290ea9db.png" width="180" height="180"/>
 </p>
 
-Pita goes well with hummus. This NFT will have a quantity of 10,000 available, and will allow for a multiplier of 1.05x. PITA can be used to purchase NFTs in our marketplace, and it also attainable by playing PitaToss.
+Pita goes well with hummus. This NFT will have a quantity of 100,000 available, and will allow for a multiplier of 1.05x in our Liquidity Pool. PITA can be used to purchase NFTs in our marketplace, and it also attainable by playing PitaToss.
 
 *PitaNFT Address:* `0xfbfaa7f4dee963fe20573ce9dd883ecb98cd57e8`
+
+**⭐ Roadmap Item**: Integrate Neofs for all NFTs
+
 <br>
 
 ### Auction (Live on TestNet) - [[Dora Link]](https://dora.coz.io/contract/neo3/mainnet/0x07d6901d7cbdd7905b17465fd768104b6cefe422)
@@ -96,3 +111,22 @@ Our purchase contract allows for the purchase of tokens and NFTs with other toke
 **⭐ Roadmap Item**: Allow any user to place an item for purchase via our contract. 
 
 <br>
+
+# Roadmap
+
+<br> 
+
+* **2021 Q3**
+  * Multiple NFT contracts released
+  * Auction, Purchase, and PitaToss contracts released
+* **2021 Q4**
+  * Liquidity Pools released
+  * Swap functionality released
+  * Improvements to PitaToss to allow for more granular gameplay, and more prize options available.
+* **2022 Q1**
+  * Introduce at least one new game
+  * Improvements on Purchase and Auction Contracts to present open protocols for decentralized creation of auctions and NFT purchases by anyone
+  * Improvements for NFTs to integrate Neofs
+* **2022 Q2**
+  * Introduce at least one new game
+  * Improvements on Swap and Liquidity Pool features to present open protocols for usage. Ideally, anyone can be an Automated Market Maker
