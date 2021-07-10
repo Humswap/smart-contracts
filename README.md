@@ -34,7 +34,7 @@ On TestNet we currently have seven live contracts, with more on the way.
 <img src="https://user-images.githubusercontent.com/85466543/125154039-cbcd0400-e10c-11eb-92b8-17f076cac609.png" width="150" height="125"/>
 </p>
 
-The Original Hummus NFT will be able to be staked in order to multiply your yields in the liquidity pool. Multiplier 2x in our Liquidity Pool. This can be won by playing PitaToss
+The Original Hummus NFT will be able to be staked in order to multiply your yields in the liquidity pool. Multiplier 2x in our Liquidity Pool. This can be won by playing PitaToss. *[This art is a placeholder. Final art is still work in progress]*
 
 *OriginalHummusNFT Address:* `0x97f2a5dabafbef8b8ec25a4adce273f827af80ae`
 
@@ -48,7 +48,7 @@ The Original Hummus NFT will be able to be staked in order to multiply your yiel
 <img src="https://user-images.githubusercontent.com/85466543/125154732-56633280-e110-11eb-9e55-464ac281f734.png" width="150" height="125"/>
 </p>
 
-Beet Hummus NFT that will allow for a multiplier in our liquidity pool. Multiplier 1.5x in our Liquidity Pool. This can be purchased with PITA via the PurchaseContract
+Beet Hummus NFT that will allow for a multiplier in our liquidity pool. Multiplier 1.5x in our Liquidity Pool. This can be purchased with PITA via the PurchaseContract. *[This art is a placeholder. Final art is still work in progress]*
 
 *BummusNFT Address:* `0x734fd178956f2156a2a38cd58d7471259b7d979c`
 
@@ -62,7 +62,7 @@ Beet Hummus NFT that will allow for a multiplier in our liquidity pool. Multipli
 <img src="https://user-images.githubusercontent.com/85466543/125154821-d5586b00-e110-11eb-8480-59edffd3199d.png" width="160" height="110"/>
 </p>
 
-Jumping Jalapeno, spicy hummus. Multiplier 1.7x in our Liquidity Pool. This can be won via the AuctionContract
+Jumping Jalapeno, spicy hummus. Multiplier 1.7x in our Liquidity Pool. This can be won via the AuctionContract. *[This art is a placeholder. Final art is still work in progress]*
 
 *JalapenoHummusNFT Address:* `0xefbff647b8e253aaad4866c0d0084c756e7c0667`
 
@@ -76,7 +76,7 @@ Jumping Jalapeno, spicy hummus. Multiplier 1.7x in our Liquidity Pool. This can 
 <img src="https://user-images.githubusercontent.com/85466543/125154900-4861e180-e111-11eb-9f94-a69d290ea9db.png" width="180" height="180"/>
 </p>
 
-Pita goes well with hummus. This NFT will have a quantity of 100,000 available, and will allow for a multiplier of 1.05x in our Liquidity Pool. PITA can be used to purchase NFTs in our marketplace, and it also attainable by playing PitaToss.
+Pita goes well with hummus. This NFT will have a quantity of 100,000 available, and will allow for a multiplier of 1.05x in our Liquidity Pool. PITA can be used to purchase NFTs in our marketplace, and it also attainable by playing PitaToss. *[This art is a placeholder. Final art is still work in progress]*
 
 *PitaNFT Address:* `0xfbfaa7f4dee963fe20573ce9dd883ecb98cd57e8`
 
