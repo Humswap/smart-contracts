@@ -1,10 +1,24 @@
 <p align="center">
-<img src="https://user-images.githubusercontent.com/85466543/123523377-04360200-d678-11eb-8872-05140867fa8e.png" width="323" height="283"/>
+<img src="https://user-images.githubusercontent.com/85466543/125174571-2ac96200-e17b-11eb-836d-702e2bbd9628.png" width="539" height="362"/>
 </p>
 <p align="center">
-Our ecosystem will consist of liquidity pools, token/NFT swapping, games and unique NFT related integrations. Stake NFTs? Sure! Our mission is to make fun and easy to use DeFi products on NEO. Would you like some pita and hummus?
+Our mission is to make fun and easy to use DeFi+NFT products on NEO. Would you like some pita and hummus?</b>
 </p>
-
+<p align="center">
+  :zap: <b>Liquidity Pools</b>
+</p>
+<p align="center">
+  :sparkles: <b>Token/NFT Swapping</b>
+</p>
+<p align="center">
+  🎲: <b>Games Games Games!</b>
+</p>
+<p align="center">
+  ❤️: <b>Unique NFT Integrations</b>
+</p>
+<p align="center">
+  🎊: <b>Stake NFTs? Sure!</b>
+</p>
 
 <br>
 
