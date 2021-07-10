@@ -116,17 +116,20 @@ Our purchase contract allows for the purchase of tokens and NFTs with other toke
 
 <br> 
 
-* **2021 Q3**
+🚀 **2021 Q3**
   * Multiple NFT contracts released
   * Auction, Purchase, and PitaToss contracts released
-* **2021 Q4**
+  
+🚀 **2021 Q4**
   * Liquidity Pools released
   * Swap functionality released
   * Improvements to PitaToss to allow for more granular gameplay, and more prize options available.
-* **2022 Q1**
+  
+🚀 **2022 Q1**
   * Introduce at least one new game
   * Improvements on Purchase and Auction Contracts to present open protocols for decentralized creation of auctions and NFT purchases by anyone
   * Improvements for NFTs to integrate Neofs
-* **2022 Q2**
+  
+🚀 **2022 Q2**
   * Introduce at least one new game
   * Improvements on Swap and Liquidity Pool features to present open protocols for usage. Ideally, anyone can be an Automated Market Maker
