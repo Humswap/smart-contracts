@@ -15,7 +15,9 @@ namespace PitaToss
     [ManifestExtra("Email", "your@address.invalid")]
     [ManifestExtra("Description", "Toss Pita and win NFTs. Tossing costs 0.1 GAS")]
     [ContractPermission("*", "onNEP17Payment")]
+    [ContractPermission("*", "onNEP11Payment")]
     [ContractPermission("*", "transfer")]
+    [ContractPermission("*", "mint")]
 
     public class PitaTossContract : SmartContract
     {
@@ -79,15 +81,20 @@ namespace PitaToss
                     var winningNFT = (UInt160)Store.Get(Keys.PrizeNFT);
                     WinNFT(randomNumber, range - 1, winningNFT, tx.Sender);
                     if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
-                        Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
+                        Contract.Call(winningNFT, "mint", CallFlags.All, new object[] { tx.Sender });
                 }
                 else 
                 {
-                    // Win DefaultNFT
-                    var winningNFT = (UInt160)Store.Get(Keys.DefaultNFT);
+                    var winningNFT = (UInt160)Store.Get(Keys.PrizeNFT);
                     WinNFT(randomNumber, range - 1, winningNFT, tx.Sender);
                     if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
-                        Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
+                        Contract.Call(winningNFT, "mint", CallFlags.All, new object[] { tx.Sender });
+
+                    // Win DefaultNFT
+                    //var winningNFT = (UInt160)Store.Get(Keys.DefaultNFT);
+                    //WinNFT(randomNumber, range - 1, winningNFT, tx.Sender);
+                    //if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
+                        //Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
                 }
             }
         }
@@ -98,7 +105,7 @@ namespace PitaToss
             if (!update)
             {
                 Store.Put(Keys.Owner, (ByteString) Tx.Sender);
-                Store.Put(Keys.Range, (BigInteger) 1000);
+                Store.Put(Keys.Range, (BigInteger) 5);
             }
         }
 

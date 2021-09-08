@@ -1,0 +1,11 @@
+[
+  {
+    "contract": "HumswapPixelNFTsContract",
+    "operation": "transfer",
+    "args": [
+      "@Test",
+      1,
+      ""
+    ]
+  }
+]

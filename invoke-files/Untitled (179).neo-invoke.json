@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "HumswapPixelNFTsContract",
+    "operation": "properties",
+    "args": [
+      "59287dfe4f34a970846a4b8e83328b3710465297518d5f003c5d1a681b21e858"
+    ]
+  }
+]

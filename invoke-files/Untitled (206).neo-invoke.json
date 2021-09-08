@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "PitaTossContract",
+    "operation": "setPrizeNFT",
+    "args": [
+      "#HumswapPixelNFTsContract"
+    ]
+  }
+]
