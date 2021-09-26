@@ -1,0 +1,11 @@
+[
+  {
+    "contract": "HumBowlsContract",
+    "operation": "transfer",
+    "args": [
+      "@Test",
+      1,
+      ""
+    ]
+  }
+]

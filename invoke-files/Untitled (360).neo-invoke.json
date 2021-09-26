@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "HumBowlsContract",
+    "args": [
+      0
+    ],
+    "operation": "setMintingLive"
+  }
+]

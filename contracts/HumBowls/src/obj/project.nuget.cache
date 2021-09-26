@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UStznR1uo07wrxR5b7ib5ECX4tLRfccf0/ghbYKHMWBl3o0omRSeNo54iK562yX8h8Hb9ZKH0qrPEQ+9MO4rKg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\17026\\smart-contracts\\contracts\\HumBowls\\src\\HumBowlsContract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\17026\\.nuget\\packages\\neo.smartcontract.framework\\3.0.0\\neo.smartcontract.framework.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

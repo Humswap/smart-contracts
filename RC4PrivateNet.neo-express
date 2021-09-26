@@ -56,15 +56,49 @@
       ]
     },
     {
-      "name": "Test",
+      "name": "Humswap",
       "accounts": [
         {
-          "private-key": "f2a6ab51e7710fbaff79f907b6445a0eceeb177d39d93e0e63666783d76f370d",
-          "script-hash": "NgY8MFNdHFBtQ8mTL7TzPivkKKHzrHsCAB",
+          "private-key": "cc53e14a1367d83de351920138081d50b045b920de340d880ef1c54208db82ab",
+          "script-hash": "NdFJ1LVu5ggHDHzyhVjgaUdfth9hGd1uBR",
           "label": null,
           "is-default": true,
           "contract": {
-            "script": "0c2102ad045a4c850111b107d5c386a0f30b977ccf8377d0b2d9db5658c3b90d6ab7d84156e7b327",
+            "script": "0c2102b13e8d9ea98ad5509488400a2669033b1c26f4cd69feee3ea9a8bda1fc85ab8b4156e7b327",
+            "parameters": [
+              "Signature"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Player2",
+      "accounts": [
+        {
+          "private-key": "f7d0c71802f386029a998df2339eba34f353ae8e4e602bbab6ad59fd66aee6e9",
+          "script-hash": "NZhZ4bzurid9m5nos4T3fFs4iiq7zQ5ngT",
+          "label": null,
+          "is-default": true,
+          "contract": {
+            "script": "0c2103f46f0f44092e632029d567d99c7c6d8fb535ad8a27c73be7d4fd7c5b9784838b4156e7b327",
+            "parameters": [
+              "Signature"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TokenReceiver",
+      "accounts": [
+        {
+          "private-key": "5f9a8e72b564274d0fca45f778deb3eef6fe4342ed58663472c61fc1967d0b07",
+          "script-hash": "NUKk4bc42KKuYumBKkepPg815nXowGBDjq",
+          "label": null,
+          "is-default": true,
+          "contract": {
+            "script": "0c21023e58f9547ba35b5f672f66c165b35e6241fc2c06b16d56d36bcffe2ffec34e184156e7b327",
             "parameters": [
               "Signature"
             ]

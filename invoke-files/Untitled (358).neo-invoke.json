@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "HumBowlsContract",
+    "operation": "updatePrice",
+    "args": [
+      200000000
+    ]
+  }
+]

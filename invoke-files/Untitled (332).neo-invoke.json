@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "HumBowlsContract",
+    "operation": "ownerOf",
+    "args": [
+      1
+    ]
+  }
+]

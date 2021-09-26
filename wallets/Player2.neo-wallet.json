@@ -1,0 +1,29 @@
+{
+  "name": "Player2",
+  "version": "1.0",
+  "scrypt": {
+    "n": 16384,
+    "r": 8,
+    "p": 8,
+    "size": 64
+  },
+  "accounts": [
+    {
+      "address": "NdyV7VE9JfF5CKdejBHZ8s5Fx64Bf4VEup",
+      "label": "Default account",
+      "isDefault": true,
+      "lock": false,
+      "key": "6PYWzPAWkHKj8pK9CxP35b9gYkpMYeHux8owfTPeU1WRPypj7SxL5AS4gJ",
+      "contract": {
+        "script": "DCECTHOd/C7boRqVQ5ypJS62nBlQ44cNpOGhPJyYVUZRvb1BVuezJw==",
+        "parameters": [
+          {
+            "name": "signature",
+            "type": "Signature"
+          }
+        ],
+        "deployed": false
+      }
+    }
+  ]
+}

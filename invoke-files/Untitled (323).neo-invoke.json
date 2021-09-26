@@ -1,0 +1,12 @@
+[
+  {
+    "contract": "GasToken",
+    "operation": "transfer",
+    "args": [
+      "@Humswap",
+      "@Player2",
+      1000000000000,
+      ""
+    ]
+  }
+]

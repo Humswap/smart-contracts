@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "HumBowlsContract",
+    "operation": "balanceOf",
+    "args": [
+      "@Humswap"
+    ]
+  }
+]
