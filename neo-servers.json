@@ -1,0 +1,12 @@
+{
+  "neo-rpc-uris": [
+    "http://seed1t4.neo.org:20332",
+    "http://seed2t4.neo.org:20332",
+    "http://seed3t4.neo.org:20332",
+    "http://seed4t4.neo.org:20332",
+    "http://seed5t4.neo.org:20332"
+  ],
+  "neo-blockchain-names": {
+    "0x9d3276785e7306daf59a3f3b9e31912c095598bbfb8a4476b821b0e59be4c57a": "Neo N3 TestNet"
+  }
+}

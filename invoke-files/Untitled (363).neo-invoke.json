@@ -1,0 +1,10 @@
+[
+  {
+    "contract": "HumBowlsContract",
+    "operation": "transferGASOut",
+    "args": [
+      100000000,
+      ""
+    ]
+  }
+]

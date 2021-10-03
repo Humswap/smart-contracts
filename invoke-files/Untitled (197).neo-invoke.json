@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "HumswapPixelNFTsContract",
+    "operation": "ownerOf",
+    "args": [
+      1
+    ]
+  }
+]

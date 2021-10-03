@@ -34,6 +34,7 @@ namespace PitaToken
         static class Keys
         {
             public const string Owner = "o";
+            public const string Minter = "m";
         }
 
         private static class AssetStorage
@@ -106,6 +107,46 @@ namespace PitaToken
         {
             if (!ValidateAddress(account)) throw new Exception("The parameters account SHOULD be a 20-byte non-zero address.");
             return AssetStorage.Get(account);
+        }
+
+        // public static void Mint(UInt160 forAddress)
+        // {
+        //     //if (DidReachMaxSupply()) throw new Exception("All NFTs have been minted.");
+        //     //if (!HasMintAccess()) throw new Exception("No access to Mint.");
+
+        //     // First we update balance and total supply
+        //     UInt160 minter = (UInt160) Store.Get(Keys.Minter);
+        //     AssetStorage.Increase(forAddress, 1);
+        //     AssetStorage.Reduce(minter, 1);
+        //     UpdateTotalSupply();
+
+        //     ByteString tokenId = (ByteString)TotalSupplyStorage.Get();
+        //     ByteString buildId = RandomId();
+        //     TokenState token = new TokenState();
+
+        //     // Create token state
+        //     token.Owner = forAddress;
+        //     token.Name = "Humswap Pixel NFT";
+        //     token.TokenId = tokenId;
+        //     token.BuildId = buildId;
+
+        //     // Map to store token state
+        //     StorageMap tokenMap = new(Storage.CurrentContext, Prefix_Token);
+
+        //     // Then we store the token. We use the order that it was minted as the key
+        //     tokenMap[tokenId] = StdLib.Serialize(token);
+        //     OnMinted(token.Owner, tokenId, buildId);
+        //     PostTransfer(null, token.Owner, tokenId, null);
+        // }
+
+        private static bool HasMintAccess()
+        {
+            UInt160 minter = (UInt160) Store.Get(Keys.Minter);
+            if (Runtime.CheckWitness(minter))
+            {
+                return true;
+            }
+            return false;
         }
 
         public static bool Transfer(UInt160 from, UInt160 to, BigInteger amount, object data)

@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "HumBowlsContract",
+    "operation": "tokensOf",
+    "args": [
+      "506065df8a787f3a55de66a3cc9bc2c48004159b"
+    ]
+  }
+]

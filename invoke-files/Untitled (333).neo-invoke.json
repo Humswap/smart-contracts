@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "HumBowlsContract",
+    "operation": "itemsOf",
+    "args": [
+      "@Player2"
+    ]
+  }
+]

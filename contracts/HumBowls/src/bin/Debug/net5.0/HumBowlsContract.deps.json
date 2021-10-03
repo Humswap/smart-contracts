@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "HumBowlsContract/1.0.0": {
+        "dependencies": {
+          "Neo.SmartContract.Framework": "3.0.0"
+        },
+        "runtime": {
+          "HumBowlsContract.dll": {}
+        }
+      },
+      "Neo.SmartContract.Framework/3.0.0": {
+        "runtime": {
+          "lib/net5.0/Neo.SmartContract.Framework.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HumBowlsContract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neo.SmartContract.Framework/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-18/jEI+wSv1HBKKx24wW5HD6KVI45V/hLaX5B9a5Snue+qyJNqKhKg5nh2WSD0DFN+k7DL6jJYnFyszyuSwfCw==",
+      "path": "neo.smartcontract.framework/3.0.0",
+      "hashPath": "neo.smartcontract.framework.3.0.0.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\bin\Debug\net5.0\HumswapPixelBowlsContract.deps.json
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\bin\Debug\net5.0\HumswapPixelBowlsContract.dll
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\bin\Debug\net5.0\ref\HumswapPixelBowlsContract.dll
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\bin\Debug\net5.0\HumswapPixelBowlsContract.pdb
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\obj\Debug\net5.0\HumswapPixelBowlsContract.csproj.AssemblyReference.cache
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\obj\Debug\net5.0\HumswapPixelBowlsContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\obj\Debug\net5.0\HumswapPixelBowlsContract.AssemblyInfoInputs.cache
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\obj\Debug\net5.0\HumswapPixelBowlsContract.AssemblyInfo.cs
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\obj\Debug\net5.0\HumswapPixelBowlsContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\obj\Debug\net5.0\HumswapPixelBowlsContract.dll
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\obj\Debug\net5.0\ref\HumswapPixelBowlsContract.dll
+C:\Users\17026\smart-contracts\contracts\HumswapPixelBowls\src\obj\Debug\net5.0\HumswapPixelBowlsContract.pdb

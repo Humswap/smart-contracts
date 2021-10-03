@@ -1,0 +1,12 @@
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\bin\Debug\net5.0\HumswapBowlsContract.deps.json
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\bin\Debug\net5.0\HumswapBowlsContract.dll
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\bin\Debug\net5.0\ref\HumswapBowlsContract.dll
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\bin\Debug\net5.0\HumswapBowlsContract.pdb
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\obj\Debug\net5.0\HumswapBowlsContract.csproj.AssemblyReference.cache
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\obj\Debug\net5.0\HumswapBowlsContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\obj\Debug\net5.0\HumswapBowlsContract.AssemblyInfoInputs.cache
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\obj\Debug\net5.0\HumswapBowlsContract.AssemblyInfo.cs
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\obj\Debug\net5.0\HumswapBowlsContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\obj\Debug\net5.0\HumswapBowlsContract.dll
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\obj\Debug\net5.0\ref\HumswapBowlsContract.dll
+C:\Users\17026\smart-contracts\contracts\HumswapBowls\src\obj\Debug\net5.0\HumswapBowlsContract.pdb
