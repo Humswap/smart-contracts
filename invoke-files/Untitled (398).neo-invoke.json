@@ -1,0 +1,9 @@
+[
+  {
+    "contract": "HumswapBowlsContract",
+    "operation": "getRoyalties",
+    "args": [
+      1
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "contract": "HumswapBowlsContract",
+    "operation": "snapshot",
+    "args": [
+      "",
+      10
+    ]
+  }
+]

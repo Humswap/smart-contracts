@@ -13,7 +13,7 @@ namespace PitaToss
     [DisplayName("Hummus.PitaTossContract")]
     [ManifestExtra("Author", "Hummus")]
     [ManifestExtra("Email", "your@address.invalid")]
-    [ManifestExtra("Description", "Toss Pita and win NFTs. Tossing costs 0.1 GAS")]
+    [ManifestExtra("Description", "Toss Pita and win NFTs")]
     [ContractPermission("*", "onNEP17Payment")]
     [ContractPermission("*", "onNEP11Payment")]
     [ContractPermission("*", "transfer")]
@@ -50,8 +50,8 @@ namespace PitaToss
 
         private static void ValidateOwner()
         {
-            ByteString owner = Store.Get(Keys.Owner);
-            if (!Tx.Sender.Equals(owner))
+            UInt160 owner = (UInt160) Store.Get(Keys.Owner);
+            if (!Runtime.CheckWitness(owner))
             {
                 throw new Exception("Only the contract owner can do this");
             }
@@ -85,16 +85,11 @@ namespace PitaToss
                 }
                 else 
                 {
-                    var winningNFT = (UInt160)Store.Get(Keys.PrizeNFT);
+                    // Win DefaultNFT
+                    var winningNFT = (UInt160)Store.Get(Keys.DefaultNFT);
                     WinNFT(randomNumber, range - 1, winningNFT, tx.Sender);
                     if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
                         Contract.Call(winningNFT, "mint", CallFlags.All, new object[] { tx.Sender });
-
-                    // Win DefaultNFT
-                    //var winningNFT = (UInt160)Store.Get(Keys.DefaultNFT);
-                    //WinNFT(randomNumber, range - 1, winningNFT, tx.Sender);
-                    //if (winningNFT is not null && ContractManagement.GetContract(winningNFT) is not null)
-                        //Contract.Call(winningNFT, "transfer", CallFlags.All, new object[] { Runtime.ExecutingScriptHash, tx.Sender, 1, data });
                 }
             }
         }
@@ -104,8 +99,8 @@ namespace PitaToss
         {
             if (!update)
             {
-                Store.Put(Keys.Owner, (ByteString) Tx.Sender);
-                Store.Put(Keys.Range, (BigInteger) 5);
+                Store.Put(Keys.Owner, (UInt160) Tx.Sender);
+                Store.Put(Keys.Range, (BigInteger) 3);
             }
         }
 

@@ -17,26 +17,26 @@ namespace HumswapBowlsTests {
         System.Numerics.BigInteger decimals();
         System.Numerics.BigInteger totalSupply();
         System.Numerics.BigInteger balanceOf(Neo.UInt160 account);
+        string getRoyalties(byte[] tokenId);
         Neo.UInt160 ownerOf(byte[] tokenId);
-        void emitProperties(byte[] tokenId);
         Neo.VM.Types.Map properties(byte[] tokenId);
-        Neo.VM.Types.Array snapshot();
+        Neo.VM.Types.Array snapshot(System.Numerics.BigInteger min, System.Numerics.BigInteger max);
         Neo.VM.Types.InteropInterface tokens();
         Neo.VM.Types.InteropInterface tokensOf(Neo.UInt160 owner);
         Neo.VM.Types.Array listTokensOf(Neo.UInt160 owner);
         bool transfer(Neo.UInt160 to, byte[] tokenId, object @data);
         void onNEP17Payment(Neo.UInt160 @from, System.Numerics.BigInteger amount, object @data);
         void ownerMint();
+        void setRoyaltyAddress(Neo.UInt160 address);
         void setMintingLive(System.Numerics.BigInteger mintingLive);
         void transferGASOut(System.Numerics.BigInteger amount, Neo.UInt160 to);
         void genericTransferOut(System.Numerics.BigInteger amount, Neo.UInt160 to, Neo.UInt160 tokenAddress);
         void updatePrice(System.Numerics.BigInteger price);
         void update(byte[] nefFile, string manifest);
-        void destroy();
+        void updateRoyalty(System.Numerics.BigInteger range);
         interface Events {
             void Transfer(Neo.UInt160 @from, Neo.UInt160 to, System.Numerics.BigInteger amount, byte[] tokenId);
             void OnUpdateTotalSupply(System.Numerics.BigInteger obj);
-            void OnProperties(string arg1, string arg2, string arg3, Neo.UInt160 arg4, byte[] arg5, byte[] arg6);
             void OnMinted(Neo.UInt160 arg1, byte[] arg2, byte[] arg3);
         }
     }
