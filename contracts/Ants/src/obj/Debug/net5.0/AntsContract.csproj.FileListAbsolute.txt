@@ -1,0 +1,12 @@
+C:\Users\17026\smart-contracts\contracts\Ants\src\bin\Debug\net5.0\AntsContract.deps.json
+C:\Users\17026\smart-contracts\contracts\Ants\src\bin\Debug\net5.0\AntsContract.dll
+C:\Users\17026\smart-contracts\contracts\Ants\src\bin\Debug\net5.0\ref\AntsContract.dll
+C:\Users\17026\smart-contracts\contracts\Ants\src\bin\Debug\net5.0\AntsContract.pdb
+C:\Users\17026\smart-contracts\contracts\Ants\src\obj\Debug\net5.0\AntsContract.csproj.AssemblyReference.cache
+C:\Users\17026\smart-contracts\contracts\Ants\src\obj\Debug\net5.0\AntsContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17026\smart-contracts\contracts\Ants\src\obj\Debug\net5.0\AntsContract.AssemblyInfoInputs.cache
+C:\Users\17026\smart-contracts\contracts\Ants\src\obj\Debug\net5.0\AntsContract.AssemblyInfo.cs
+C:\Users\17026\smart-contracts\contracts\Ants\src\obj\Debug\net5.0\AntsContract.csproj.CoreCompileInputs.cache
+C:\Users\17026\smart-contracts\contracts\Ants\src\obj\Debug\net5.0\AntsContract.dll
+C:\Users\17026\smart-contracts\contracts\Ants\src\obj\Debug\net5.0\ref\AntsContract.dll
+C:\Users\17026\smart-contracts\contracts\Ants\src\obj\Debug\net5.0\AntsContract.pdb

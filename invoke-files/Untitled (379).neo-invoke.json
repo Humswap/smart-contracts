@@ -1,0 +1,11 @@
+[
+  {
+    "contract": "HumswapBowlsContract",
+    "operation": "transfer",
+    "args": [
+      "@Player2",
+      4,
+      ""
+    ]
+  }
+]

@@ -23,7 +23,7 @@ namespace HumswapBowls
     {
 
         #region Token Settings
-        static readonly int MaxSupply = 9999;
+        static readonly int MaxSupply = 10000;
         static readonly int InitialSupply = 0;
         #endregion
 
@@ -41,8 +41,6 @@ namespace HumswapBowls
         {
             private static StorageMap Store => new StorageMap(Storage.CurrentContext, "DB_");
             public static readonly string key = "totalSupply";
-            public static void Increase(BigInteger value) => Put(Get() + value);
-            public static void Reduce(BigInteger value) => Put(Get() - value);
             public static void Put(BigInteger value) => Store.Put(key, value);
             public static BigInteger Get() => (BigInteger)Store.Get(key);
 
@@ -51,8 +49,6 @@ namespace HumswapBowls
         private static class AssetStorage
         {
             public static void Increase(UInt160 key, BigInteger value) => Put(key, Get(key) + value);
-            public static void Enable() => Store.Put("enable".ToByteArray(), 1);
-            public static void Disable() => Store.Put("enable".ToByteArray(), 0);
             public static void Reduce(UInt160 key, BigInteger value)
             {
                 var oldValue = Get(key);
@@ -63,11 +59,6 @@ namespace HumswapBowls
             }
             public static void Put(UInt160 key, BigInteger value) => Store.Put((byte[])key, value);
             public static BigInteger Get(UInt160 key) => (BigInteger)Store.Get((byte[])key);
-            public static bool GetPaymentStatus()
-            {
-                var enableValue = (BigInteger)Store.Get("enable");
-                return enableValue.Equals(1);
-            }
             public static void Remove(UInt160 key) => Store.Delete((byte[])key);
         }
 
@@ -76,6 +67,8 @@ namespace HumswapBowls
             public const string Owner = "o";
             public const string MintingLive = "m";
             public const string Price = "p";
+            public const string Range = "r";
+            public const string RoyaltyAddress = "ra";
         }
 
         private static bool ValidateAddress(UInt160 address) => address.IsValid && !address.IsZero;
@@ -105,11 +98,22 @@ namespace HumswapBowls
         public static event OnTransferDelegate OnTransfer;
 
         public static event Action<BigInteger> OnUpdateTotalSupply;
-        public static event Action<string, string, string, UInt160, ByteString, ByteString> OnProperties;
         public static event Action<UInt160, ByteString, ByteString> OnMinted;
 
         protected const byte Prefix_Token = 0x03;
         protected const byte Prefix_AccountToken = 0x04;
+
+        [Safe]
+        public static string GetRoyalties(ByteString tokenId) {
+            List<object> jArr = new List<object>();
+            var map = new Map<string, string>();
+            string royalty = ((BigInteger)Store.Get(Keys.Range)).ToString();
+            string royaltyAddress = Store.Get(Keys.RoyaltyAddress);
+            map["address"] = royaltyAddress;
+            map["value"] = royalty;
+            jArr.Add(map);
+            return StdLib.JsonSerialize(jArr);
+        }
 
         [Safe]
         public static UInt160 OwnerOf(ByteString tokenId)
@@ -119,22 +123,14 @@ namespace HumswapBowls
             return token.Owner;
         }
 
-        public static void EmitProperties(ByteString tokenId)
-        {
-            StorageMap tokenMap = new(Storage.CurrentContext, Prefix_Token);
-            if (tokenMap[tokenId] is null) throw new Exception("tokenId does not exist");
-
-            TokenState token = (TokenState)StdLib.Deserialize(tokenMap[tokenId]);
-            OnProperties(token.Name, token.Image, token.TokenURI, token.Owner, token.TokenId, token.BuildId);
-        }
-
         [Safe]
         public static Map<string, object> Properties(ByteString tokenId)
         {
             StorageMap tokenMap = new(Storage.CurrentContext, Prefix_Token);
-            if (tokenMap[tokenId] is null) throw new Exception("tokenId does not exist");
+            var id = tokenMap[tokenId];
+            if (id is null) throw new Exception("tokenId does not exist");
 
-            TokenState token = (TokenState)StdLib.Deserialize(tokenMap[tokenId]);
+            TokenState token = (TokenState)StdLib.Deserialize(id);
             Map<string, object> map = new();
             map["name"] = token.Name;
             map["image"] = token.Image;
@@ -146,15 +142,22 @@ namespace HumswapBowls
         }
 
         [Safe]
-        public static List<object> Snapshot() {
+        public static List<object> Snapshot(uint min, uint max) {
             List<object> byteStringArr = new List<object>();
 
             StorageMap accountMap = new(Storage.CurrentContext, Prefix_AccountToken);
             var iterator = accountMap.Find(FindOptions.KeysOnly | FindOptions.RemovePrefix);
+            var count = 0;
 
             while (iterator.Next())
             {
-                byteStringArr.Add(iterator.Value);
+                count += 1;
+                if (count >= min && count <= max) {
+                    byteStringArr.Add(iterator.Value);
+                }
+                if (count > max) {
+                    return byteStringArr;
+                }
             }
         
             return byteStringArr;
@@ -224,12 +227,11 @@ namespace HumswapBowls
             return true;
         }
 
-        protected static ByteString RandomId()
+        protected static ByteString RandomId(BigInteger tokenId)
         {
-            var tx = (Transaction)Runtime.ScriptContainer;
-            BigInteger nonce = (BigInteger) tx.Nonce >> 1;
-            ByteString value = (ByteString) nonce;
-            return CryptoLib.Sha256(value);
+            BigInteger rand = (BigInteger) Runtime.GetRandom();
+            ByteString value = (ByteString) rand;
+            return CryptoLib.Sha256(value+tokenId);
         }
 
         public static void OnNEP17Payment(UInt160 from, BigInteger amount, object data)
@@ -256,14 +258,14 @@ namespace HumswapBowls
             TotalSupplyStorage.Put(updatedSupply);
 
             ByteString tokenId = (ByteString)updatedSupply;
-            ByteString buildId = RandomId();
+            ByteString buildId = RandomId(updatedSupply);
             TokenState token = new TokenState();
 
             // Create token state
             token.Owner = from;
             token.Name = "Humswap Bowl";
-            token.Image = $"https://www.humswap.org/image/bowl/{updatedSupply}";
-            token.TokenURI = $"https://www.humswap.org/data/bowl/{updatedSupply}";
+            token.Image = $"https://www.humswap.org/api/image/bowl/{updatedSupply}";
+            token.TokenURI = $"https://www.humswap.org/api/data/bowl/{updatedSupply}";
             token.TokenId = tokenId;
             token.BuildId = buildId;
 
@@ -285,13 +287,6 @@ namespace HumswapBowls
         {
             if (!IsOwner()) throw new Exception("Only the owner can use this mint.");
             Mint(Tx.Sender);
-        }
-
-        private static void UpdateTotalSupply() {
-            BigInteger currentSupply = TotalSupplyStorage.Get();
-            BigInteger updatedSupply = currentSupply + 1;
-            OnUpdateTotalSupply(updatedSupply);
-            TotalSupplyStorage.Increase(1);
         }
 
         private static bool DidReachMaxSupply() {
@@ -331,6 +326,14 @@ namespace HumswapBowls
             return false;
         }
 
+        public static void SetRoyaltyAddress(UInt160 address) {
+            if (IsOwner()) {
+                Store.Put(Keys.RoyaltyAddress, address);
+            } else {
+                throw new Exception("Only the owner can set the address.");
+            }
+        }
+
         public static void SetMintingLive(BigInteger mintingLive)
         {
             if (IsOwner()) {
@@ -365,10 +368,10 @@ namespace HumswapBowls
             ContractManagement.Update(nefFile, manifest, null);
         }
 
-        public static void Destroy()
+        public static void UpdateRoyalty(BigInteger range) 
         {
             if (!IsOwner()) throw new Exception("Only the owner can perform this action.");
-            ContractManagement.Destroy();
+            Store.Put(Keys.Range, (BigInteger) range);
         }
 
         [DisplayName("_deploy")]
@@ -376,10 +379,12 @@ namespace HumswapBowls
         {
             if (update) return;
 
-            TotalSupplyStorage.Increase(InitialSupply);
+            TotalSupplyStorage.Put(InitialSupply);
             Store.Put(Keys.Owner, (UInt160) Tx.Sender);
+            Store.Put(Keys.RoyaltyAddress, (UInt160) Tx.Sender);
             Store.Put(Keys.MintingLive, (BigInteger) 0);
-            Store.Put(Keys.Price, (BigInteger) 2500000000);
+            Store.Put(Keys.Price, (BigInteger) 900000000);
+            Store.Put(Keys.Range, (BigInteger) 300);
         }
     }
 }

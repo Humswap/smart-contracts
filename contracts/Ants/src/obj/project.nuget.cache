@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "B5RUMMlHCD4z+oNw5cWoeo87RjHrSIDIKv1xdFEzeRBWC5wfXzgeUwxfw2SfBkvfEYFvdE1r5+wePwRGWl7PLQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\17026\\smart-contracts\\contracts\\Ants\\src\\AntsContract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\17026\\.nuget\\packages\\neo.smartcontract.framework\\3.0.0\\neo.smartcontract.framework.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
